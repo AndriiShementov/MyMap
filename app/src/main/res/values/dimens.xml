@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="txtHeight">20dp</dimen>
+    <dimen name="layHeight">40dp</dimen>
+    <dimen name="atcompleteDrpDwnHeight">110dp</dimen>
+    <dimen name="paddingApp">20dp</dimen>
+    <dimen name="txtViewHeght_FromTo">20dp</dimen>
+</resources>

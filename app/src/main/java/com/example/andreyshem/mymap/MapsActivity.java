@@ -54,12 +54,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         TabHost.TabSpec tabSpec = tabHost.newTabSpec("tag1");
 
         tabSpec.setContent(R.id.linearLayout2);
-        tabSpec.setIndicator("Start (From)");
+        tabSpec.setIndicator("Start");
         tabHost.addTab(tabSpec);
 
         tabSpec = tabHost.newTabSpec("tag2");
         tabSpec.setContent(R.id.linearLayout3);
-        tabSpec.setIndicator("Finish (To)");
+        tabSpec.setIndicator("Finish");
         tabHost.addTab(tabSpec);
 
         tabHost.setCurrentTab(0);
@@ -71,7 +71,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onItemClick(AdapterView adapterView, View view, int position, long id) {
                 String str = (String) adapterView.getItemAtPosition(position);
                 textViewFROM = (TextView) findViewById(R.id.textViewFROM);
-                textViewFROM.setText("From: " + str);
+                textViewFROM.setText(R.string.txtFrom + str);
             }
         });
 
@@ -82,7 +82,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onItemClick(AdapterView adapterView, View view, int position, long id) {
                 String str = (String) adapterView.getItemAtPosition(position);
                 textViewTO = (TextView) findViewById(R.id.textViewTO);
-                textViewTO.setText("To: " + str);
+                textViewTO.setText(R.string.txtTo + str);
             }
         });
 
@@ -110,7 +110,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng dnepr = new LatLng(48.466601, 35.018155);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(dnepr, 18));
         originMarkers.add(mMap.addMarker(new MarkerOptions()
-                .title("Dnepr-centr")
+                .title("Dnipro-center")
                 .position(dnepr)));
     }
 
@@ -118,11 +118,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         String origin = textViewFROM.getText().toString();
         String destination = textViewTO.getText().toString();
         if (origin.isEmpty()) {
-            Toast.makeText(this, "Please enter origin address!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.toastEmptyOrig, Toast.LENGTH_SHORT).show();
             return;
         }
         if (destination.isEmpty()) {
-            Toast.makeText(this, "Please enter destination address!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.toastEmptyDist, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -163,7 +163,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         destinationMarkers = new ArrayList<>();
 
         for (Route route : routes) {
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(route.startLocation, 16));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(route.startLocation, 8));
             // ((TextView) findViewById(R.id.tvDuration)).setText(route.duration.text);
             // ((TextView) findViewById(R.id.tvDistance)).setText(route.distance.text);
 

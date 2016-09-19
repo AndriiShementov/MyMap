@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">MyMap</string>
     <string name="title_activity_maps">Map</string>
+    <string name="btnTxt">Find path</string>
+    <string name="txtFrom">From: </string>
+    <string name="txtTo">To: </string>
+    <string name="toastEmptyOrig">Please enter origin address!</string>
+    <string name="toastEmptyDist">Please enter destination address</string>
+    <string name="atoComplTxt">Please enter your place</string>
 </resources>

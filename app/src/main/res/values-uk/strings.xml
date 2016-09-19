@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_maps">Мапа</string>
+    <string name="btnTxt">Знайти шлях</string>
+    <string name="txtFrom">Звiдки: </string>
+    <string name="txtTo">Куди: </string>
+    <string name="toastEmptyOrig">Будь ласка, вкажить початкову адресу!</string>
+    <string name="toastEmptyDist">Будь ласка, вкажить кiнцеву адресу!</string>
+    <string name="atoComplTxt">Будь ласка, вкажить адресу</string>
+</resources>
